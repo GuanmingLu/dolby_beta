@@ -166,7 +166,7 @@ public class HookOther {
     private void deleteAdAndTinker() throws IOException {
         //广告缓存路径
         String CACHE_PATH3 = Environment.getExternalStorageDirectory() + "/netease/cloudmusic/lite/Ad";
-        if(PACKAGE_NAME.equals("com.hihonor.cloudmusic"))
+        if(PACKAGE_NAME.equals("com.hihonor.cloudmusic") || PACKAGE_NAME.equals("com.netease.cloudmusic.iot"))
         {
             CACHE_PATH3 = Environment.getExternalStorageDirectory() + "/hihonor/cloudmusic/Ad";
         }

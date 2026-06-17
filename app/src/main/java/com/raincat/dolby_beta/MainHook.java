@@ -25,7 +25,8 @@ public class MainHook implements IXposedHookLoadPackage, IXposedHookZygoteInit {
                 new Hook(lpparam);
         }else if (!TextUtils.isEmpty(lpparam.packageName) && lpparam.packageName.equals("com.netease.cloudmusic.lite")) {
             new HookOther(lpparam);
-        }else if (!TextUtils.isEmpty(lpparam.packageName) && lpparam.packageName.equals("com.hihonor.cloudmusic")) {
+        }else if (!TextUtils.isEmpty(lpparam.packageName) && (lpparam.packageName.equals("com.hihonor.cloudmusic") || lpparam.packageName.equals("com.netease.cloudmusic.iot"))) {
+            // com.netease.cloudmusic.iot 是我用荣耀版改成车机版的包名
             new HookOther(lpparam);
         }
     }
